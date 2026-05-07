@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "519976670680",
+    "project_id": "habitquestbaza",
+    "storage_bucket": "habitquestbaza.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519976670680:android:b5b569267e384f76ee4ead",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "519976670680-ga0qqn1bssv0o5pcpoovlsf8ojpsjec2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgdJMkEuIzZngmmailwLk4Z0T7PRvXRKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "519976670680-ga0qqn1bssv0o5pcpoovlsf8ojpsjec2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
