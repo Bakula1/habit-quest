@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:habit_quest/widget_tree.dart';
 import 'package:habit_quest/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +20,18 @@ class HomePage extends StatelessWidget {
     return Text(user?.email ?? 'User email');
   }
 
-  Widget _signOutButton() {
-    return ElevatedButton(onPressed: signOut, child: const Text('Sign Out'));
+  Widget _signOutButton(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () async {
+        await signOut();
+        if (!context.mounted) return; // dodaj ovo
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (_) => const WidgetTree()),
+          (route) => false,
+        );
+      },
+      child: const Text('Sign Out'),
+    );
   }
 
   @override
@@ -37,7 +48,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[_userUid(), _signOutButton()],
+          children: <Widget>[_userUid(), _signOutButton(context)],
         ),
       ),
     );
