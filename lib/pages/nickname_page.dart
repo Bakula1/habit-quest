@@ -78,10 +78,6 @@ class _NicknamePageState extends State<NicknamePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 201, 65, 47),
-        title: const Text('Welcome!'),
-      ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -160,9 +156,9 @@ class _NicknamePageState extends State<NicknamePage> {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color.fromARGB(
                             255,
-                            201,
-                            65,
-                            47,
+                            21,
+                            143,
+                            208,
                           ),
                           padding: const EdgeInsets.symmetric(vertical: 15),
                         ),
